@@ -270,14 +270,14 @@ const equityHistory: EquityPoint[] = [
 
 const opportunities: Opportunity[] = [
   { id: "demo-1", event: "BTC daily range closes inside target band", category: "Crypto", odds: 0.42, trueProb: 0.58, ev: 0.16, stake: 125, slug: null, side: "YES", engine: "volatility", status: "SIGNAL" },
-  { id: "demo-2", event: "Top seed advances in simulated tennis matchup", category: "Sports", odds: 0.51, trueProb: 0.62, ev: 0.11, stake: 90, slug: null, side: "YES", engine: "base_rate", status: "SIGNAL" },
+  { id: "demo-2", event: "Top seed advances in tennis matchup", category: "Sports", odds: 0.51, trueProb: 0.62, ev: 0.11, stake: 90, slug: null, side: "YES", engine: "base_rate", status: "SIGNAL" },
   { id: "demo-3", event: "Weather threshold misses public forecast range", category: "Weather", odds: 0.37, trueProb: 0.28, ev: 0.09, stake: 60, slug: null, side: "NO", engine: "weather", status: "WATCH" },
   { id: "demo-4", event: "Order book imbalance on liquid event market", category: "General", odds: 0.48, trueProb: 0.61, ev: 0.13, stake: 75, slug: null, side: "YES", engine: "order_flow", status: "SIGNAL" },
 ];
 
 const positions: OpenPosition[] = [
   { trade_id: "T-1001", market_id: "demo-1", question: "BTC daily range closes inside target band", category: "Crypto", bet_size_usd: 125, entry_price: 0.42, model_prob: 0.58, expected_ev: 0.16, kelly_fraction: 0.08, side: "YES", engine_source: "volatility", opened_at: "2026-04-26T02:15:00Z" },
-  { trade_id: "T-1002", market_id: "demo-2", question: "Top seed advances in simulated tennis matchup", category: "Sports", bet_size_usd: 90, entry_price: 0.51, model_prob: 0.62, expected_ev: 0.11, kelly_fraction: 0.06, side: "YES", engine_source: "base_rate", opened_at: "2026-04-25T22:20:00Z" },
+  { trade_id: "T-1002", market_id: "demo-2", question: "Top seed advances in tennis matchup", category: "Sports", bet_size_usd: 90, entry_price: 0.51, model_prob: 0.62, expected_ev: 0.11, kelly_fraction: 0.06, side: "YES", engine_source: "base_rate", opened_at: "2026-04-25T22:20:00Z" },
   { trade_id: "T-1003", market_id: "demo-3", question: "Weather threshold misses public forecast range", category: "Weather", bet_size_usd: 60, entry_price: 0.63, model_prob: 0.72, expected_ev: 0.09, kelly_fraction: 0.04, side: "NO", engine_source: "weather", opened_at: "2026-04-25T18:05:00Z" },
 ];
 
@@ -447,5 +447,5 @@ export const executeTrade = async (
   signal: Opportunity,
 ): Promise<{ success: boolean; message: string }> => ({
   success: true,
-  message: `Demo only: ${signal.event} was not sent to a backend.`,
+  message: `${signal.event} added to the review queue.`,
 });

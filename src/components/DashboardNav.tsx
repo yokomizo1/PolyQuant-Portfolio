@@ -14,7 +14,7 @@ import {
 import { useAuth } from "@/contexts/AuthContext";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
-const mockNotifications = [
+const notifications = [
   {
     id: "1",
     type: "trade" as const,
@@ -64,7 +64,7 @@ const DashboardNav = () => {
   const profileRef = useRef<HTMLDivElement>(null);
   const notifRef = useRef<HTMLDivElement>(null);
 
-  const unreadCount = mockNotifications.filter((n) => n.unread).length;
+  const unreadCount = notifications.filter((n) => n.unread).length;
 
   const initials =
     user?.user_metadata?.display_name
@@ -92,7 +92,7 @@ const DashboardNav = () => {
 
   const profileMenuItems = [
     { icon: Settings, label: "Account Settings" },
-    { icon: Key, label: "API Keys" },
+    { icon: Key, label: "Integrations" },
     { icon: CreditCard, label: "Subscription" },
     { icon: HelpCircle, label: "Support" },
   ];
@@ -153,7 +153,7 @@ const DashboardNav = () => {
                   )}
                 </div>
                 <div className="max-h-96 overflow-y-auto divide-y divide-border">
-                  {mockNotifications.map((n) => (
+                  {notifications.map((n) => (
                     <div
                       key={n.id}
                       className={`px-4 py-3 flex gap-3 hover:bg-secondary/50 transition-colors cursor-pointer ${

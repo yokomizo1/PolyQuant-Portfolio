@@ -1,21 +1,28 @@
-# PolyQuant Portfolio Demo
+# PolyQuant
 
-This repository is a sanitized Lovable-ready demo of the private PolyQuant dashboard.
-It preserves the visual product surface of the real frontend while replacing every
-backend call, auth flow, and runtime integration with static mock data.
+PolyQuant is a prediction-market intelligence dashboard for monitoring market signals, portfolio exposure, calibration quality, and research performance in one place.
 
-## What Is Included
+Live preview: https://polyquantdemo.lovable.app
 
-- The real React dashboard shell and dashboard components.
-- Mocked portfolio, opportunities, positions, analytics, risk, timeline, and smart-money views.
-- A Vite + React + TypeScript setup that runs without API keys.
+## Overview
 
-## What Is Not Included
+The dashboard presents a clean operating view for a multi-engine quantitative research workflow:
 
-- The private Python backend.
-- Probability engines, execution daemons, settlement workers, notebooks, trade ledgers, logs, or market-data captures.
-- Supabase auth/config, Telegram integrations, API keys, or production environment files.
-- Proprietary sizing, routing, calibration, or trading logic.
+- Portfolio KPIs, equity curve, and open exposure.
+- Ranked opportunities with engine, side, probability, EV, and sizing context.
+- Signal funnel, trade timeline, calibration heatmap, rejection log, and risk gauges.
+- Smart-money/order-flow panel for market activity monitoring.
+
+This public repository is a portfolio build of the interface. The production research engine, data pipelines, and operational services are not part of this repository.
+
+## Stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
+- Recharts
 
 ## Run Locally
 
@@ -30,23 +37,10 @@ Build:
 npm run build
 ```
 
-## Use In Lovable
+## Repository Note
 
-Import this GitHub repository directly:
-
-```text
-https://github.com/yokomizo1/PolyQuant-Portfolio
-```
-
-Lovable prompt:
-
-```text
-Use this repository as a sanitized demo of the PolyQuant dashboard. Keep the
-current visual structure and mock-data behavior. Do not add real authentication,
-API keys, trading execution, settlement logic, or backend integrations. Improve
-only the public demo UX, copy, responsiveness, and presentation polish.
-```
+This project is published for product review and portfolio purposes. It focuses on the dashboard experience and public-facing presentation layer.
 
 ## License
 
-All rights reserved. This repository is for portfolio review and demo purposes only.
+All rights reserved.

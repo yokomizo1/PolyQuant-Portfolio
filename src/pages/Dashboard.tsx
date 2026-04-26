@@ -70,7 +70,7 @@ const Dashboard = () => {
           ⚠ Trading involves significant risk. PolyQuant is a quantitative analysis tool, not financial advice.
         </p>
         <p className="text-[10px] font-mono text-muted-foreground/40">
-          PolyQuant Bot v1.0 — Paper trading with real Polymarket data.
+          PolyQuant Dashboard — Research and portfolio monitoring interface.
         </p>
       </footer>
     </main>
