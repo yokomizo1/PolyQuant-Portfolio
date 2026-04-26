@@ -1,29 +1,23 @@
 # PolyQuant Portfolio Demo
 
-PolyQuant is a private quantitative research and paper-trading platform for prediction markets. This public repository is a sanitized portfolio demo: it shows the product experience, information architecture, and dashboard design without publishing the proprietary trading engines, execution logic, calibration code, production data, or private integrations.
+This repository is a sanitized Lovable-ready demo of the private PolyQuant dashboard.
+It preserves the visual product surface of the real frontend while replacing every
+backend call, auth flow, and runtime integration with static mock data.
 
-## What This Demo Shows
+## What Is Included
 
-- A React dashboard for monitoring a multi-engine market research system.
-- Mock portfolio KPIs, signal quality metrics, equity curves, active positions, and event timelines.
-- Product-level architecture and UX direction for a trading research platform.
-- A clean frontend implementation that can be reviewed without requiring API keys or private backend services.
+- The real React dashboard shell and dashboard components.
+- Mocked portfolio, opportunities, positions, analytics, risk, timeline, and smart-money views.
+- A Vite + React + TypeScript setup that runs without API keys.
 
 ## What Is Not Included
 
-- Proprietary probability engines, strategy gates, risk sizing, or execution logic.
-- Backend Python services, daemons, settlement workers, notebooks, trade ledgers, or market-data captures.
-- API keys, Supabase configuration, Telegram integrations, or real account/runtime state.
+- The private Python backend.
+- Probability engines, execution daemons, settlement workers, notebooks, trade ledgers, logs, or market-data captures.
+- Supabase auth/config, Telegram integrations, API keys, or production environment files.
+- Proprietary sizing, routing, calibration, or trading logic.
 
-## Tech Stack
-
-- React + TypeScript
-- Vite
-- Recharts
-- Lucide icons
-- CSS modules via plain CSS custom properties
-
-## Local Development
+## Run Locally
 
 ```bash
 npm install
@@ -36,6 +30,23 @@ Build:
 npm run build
 ```
 
-## Commercial Note
+## Use In Lovable
 
-This is a public demo only. The production PolyQuant system remains private and is not licensed for use, copying, deployment, or resale.
+Import this GitHub repository directly:
+
+```text
+https://github.com/yokomizo1/PolyQuant-Portfolio
+```
+
+Lovable prompt:
+
+```text
+Use this repository as a sanitized demo of the PolyQuant dashboard. Keep the
+current visual structure and mock-data behavior. Do not add real authentication,
+API keys, trading execution, settlement logic, or backend integrations. Improve
+only the public demo UX, copy, responsiveness, and presentation polish.
+```
+
+## License
+
+All rights reserved. This repository is for portfolio review and demo purposes only.
